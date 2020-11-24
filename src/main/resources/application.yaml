@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      topic: customers
+      group-id: fabriik
+
+server:
+  port: 8008
