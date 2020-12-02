@@ -5,5 +5,16 @@ spring:
       topic: customers
       group-id: fabriik
 
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/postgres
+
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    database: POSTGRESQL
+
 server:
   port: 8008

@@ -17,7 +17,7 @@ public class Listener {
     public void MessageListener(byte[] message) {
         try {
             Customer.customer customer = Customer.customer.parseFrom(message);
-            customerService.addCustomerAndCountAverage(customer.getId(), customer.getScore());
+            customerService.addCustomer(customer.getId(), customer.getScore());
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }

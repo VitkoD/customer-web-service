@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
 
     @Autowired
-    private CustomerService addCustomerServiceAndScore;
+    private CustomerService customerService;
 
     @GetMapping("/customer-average-score/{id}")
     ResponceDto getAverageByCustomerId(@PathVariable Long id) {
-        return addCustomerServiceAndScore.getCustomerById(id);
+        return customerService.getCustomerById(id);
     }
 
     @ExceptionHandler({ CustomerNotFoundException.class })
