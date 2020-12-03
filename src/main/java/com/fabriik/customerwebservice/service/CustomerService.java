@@ -32,7 +32,7 @@ public class CustomerService {
 
     public void createTableIfNotExists() {
         try {
-            Connection connect = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
+            Connection connect = DriverManager.getConnection("jdbc:postgresql://db:5432/postgres", "postgres", "postgres");
             connect.createStatement().executeUpdate(
                     "create table if not exists customers(id bigint not null constraint customers_pk primary key, count   bigint, average double precision)");
         } catch (SQLException e) {
